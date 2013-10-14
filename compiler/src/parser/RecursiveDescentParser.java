@@ -257,11 +257,13 @@ public class RecursiveDescentParser {
                 float r = Float.parseFloat(wRHS.value);
                 Real result = new Real(l*r);
                 stack.push(result);
+                System.out.println(l*r);
             } else if((lhsType.width == 4) && (rhsType.width == 4)) {
                 int l = Integer.parseInt(wLHS.value);
                 int r = Integer.parseInt(wRHS.value);
                 Num result = new Num(l*r);
                 stack.push((Token)result);
+                System.out.println(l*r);
             }
         } else if (lhs.tag == Tag.ID) {
             Type lhsType = top.get(lhs).type;
@@ -271,11 +273,13 @@ public class RecursiveDescentParser {
                 float r = Float.parseFloat(rhs.toString());
                 Real result = new Real(l*r);
                 stack.push(result);
+                System.out.println(l*r);
             } else if ((lhsType.width == 4) && (rhs.tag == Tag.NUM)) {
                 int l = Integer.parseInt(wLHS.value);
                 int r = Integer.parseInt(rhs.toString());
                 Num result = new Num(l*r);
                 stack.push(result);
+                System.out.println(l*r);
             }
         } else if (rhs.tag == Tag.ID) {
             Type rhsType = top.get(rhs).type;
@@ -285,11 +289,13 @@ public class RecursiveDescentParser {
                 float r = Float.parseFloat(wRHS.value);
                 Real result = new Real(l*r);
                 stack.push(result);
+                System.out.println(l*r);
             } else if ((rhsType.width == 4) && (lhs.tag == Tag.NUM)) {
                 int l = Integer.parseInt(lhs.toString());
                 int r = Integer.parseInt(wRHS.value);
                 Num result = new Num(l*r);
                 stack.push(result);
+                System.out.println(l*r);
             }
         } else {                                        // Both are Num/Real values
             if((rhs.tag == Tag.REAL) || (lhs.tag == Tag.REAL)) {
