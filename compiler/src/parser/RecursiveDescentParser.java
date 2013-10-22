@@ -18,7 +18,7 @@ public class RecursiveDescentParser {
     boolean backtracted;
     Type type;
     int used = 0;
-    Env top; //Symbol table at the top -- here only one
+    Env top;                    //Symbol table at the top -- here only one
     Stack stack;
 
     public RecursiveDescentParser() throws IOException {
