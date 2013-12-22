@@ -322,7 +322,10 @@ public class RecursiveDescentParser {
         } else if((lookahead.tag == Tag.NUM) || (lookahead.tag == Tag.REAL)) {
             System.out.print(lookahead.toString());
             stack.push(lookahead);
-            match(new Token(Tag.NUM));
+            if(lookahead.tag == Tag.NUM)
+                match(new Token(Tag.NUM));
+            else
+                match(new Token(Tag.REAL));
         }else if(lookahead.tag == Tag.ID) {
             System.out.print(lookahead.toString());
             stack.push(lookahead);
