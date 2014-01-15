@@ -8,7 +8,7 @@ public class Node {
     int lexline = 0;
 
     Node() {
-        lexline = Lexer.line;
+//        lexline = Lexer.line;
     }
 
     void error(String s) {

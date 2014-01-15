@@ -4,7 +4,7 @@ package lexer;
 public class Word extends Token {
 
     public String lexeme = "";
-    public String value = "";
+    public String value = "0";
 
     public Word(String s, int tag) {
         super(tag);

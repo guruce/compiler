@@ -29,4 +29,11 @@ public class Env {
         return null;
     }
     
+    public void printVar(){
+        for (Object key : table.keySet()) {
+            Word w = (Word)key;
+            System.out.println(key + ": " + w.value);
+        }        
+    }
+    
 }
