@@ -1,0 +1,8 @@
+int a,b,c,d,e; 
+float f;
+a = 3; 
+b = 3*2;
+c = a*(a+b);
+d = b*(c+a)+20;
+e = 2*(d+5);
+f = a * 2.5;
