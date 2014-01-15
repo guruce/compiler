@@ -8,7 +8,7 @@ Grammer
 -------
 
 P → DL
-D→BN; D|BN;
+D→BN; D | BN;
 B → int | float
 N → N , id | id L→S;L|S;
 S → id = E | E
